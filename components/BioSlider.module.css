@@ -1,7 +1,23 @@
-.sliderSection {
+.wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.textContainer {
+  max-width: 680px;
+  width: 100%;
+  margin: auto;
+}
+
+.sliderSection {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin-bottom: 40px;
 }
 
 .variantLabel {
@@ -22,7 +38,7 @@
   text-align: justify;
   min-height: 120px;
   transition: opacity 0.15s ease, transform 0.15s ease;
-  margin-bottom: 48px;
+  margin-bottom: 0px; 
 }
 
 .fadeOut {
@@ -38,14 +54,15 @@
 .sliderContainer {
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
   width: 100%;
+  gap: 24px;
 }
 
 .label {
   font-family: var(--font-inter);
-  font-size: 12px;
-  color: var(--color-muted);
+  font-size: 14px;
+  color: var(--color-text);
   flex-shrink: 0;
 }
 
@@ -53,39 +70,51 @@
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 1px;
-  background: var(--color-text);
+  height: 2px;
+  background: linear-gradient(
+    to right, 
+    #000 0%, 
+    #000 var(--progress), 
+    #e5e5e5 var(--progress), 
+    #e5e5e5 100%
+  );
   outline: none;
   cursor: pointer;
+  margin: 0;
+  border-radius: 0;
 }
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--color-text);
+  width: 2px;
+  height: 24px;
+  background: #000;
   cursor: pointer;
-  transition: transform 0.15s ease;
-}
-
-.slider::-webkit-slider-thumb:hover {
-  transform: scale(1.3);
+  border: none;
+  border-radius: 0;
 }
 
 .slider::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--color-text);
+  width: 2px;
+  height: 24px;
+  background: #000;
   cursor: pointer;
   border: none;
+  border-radius: 0;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scaleY(1.2); 
 }
 
 @media (max-width: 640px) {
   .variantText {
     font-size: 17px;
     text-align: left;
+  }
+  
+  .sliderSection {
+    padding: 0; 
   }
 }

@@ -1,7 +1,11 @@
 .section {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 120px 24px;
+  width: 100%;
+  margin: 0;
+  padding: 40px 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .bio p {

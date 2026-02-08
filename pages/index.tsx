@@ -39,7 +39,7 @@ export default function Home() {
         }}
       >
         <Link href="/contact" style={{ color: 'var(--color-text)', textDecoration: 'none' }}>
-          Say Hi
+          Say Hello!
         </Link>
       </footer>
     </>
