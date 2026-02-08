@@ -1,0 +1,59 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.typeContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.line1,
+.line2 {
+  display: block;
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+  color: var(--color-text);
+  letter-spacing: -0.04em;
+  line-height: 0.82;
+  white-space: nowrap;
+  transform: scaleX(0.62);
+}
+
+.line1 {
+  font-size: clamp(72px, 13vw, 240px);
+}
+
+.line2 {
+  font-size: clamp(68px, 12.5vw, 230px);
+}
+
+.character {
+  position: absolute;
+  left: 50%;
+  bottom: 23vh;
+  transform: translateX(-50%);
+  height: clamp(160px, 32vh, 380px);
+  width: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 77vh;
+  height: 1px;
+  background: #d9d9d9;
+}

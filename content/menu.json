@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    { "divider": true },
+    {
+      "label": "About",
+      "children": [
+        { "label": "Bio", "href": "/#bio" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+    {
+      "label": "Writing",
+      "children": [
+        { "label": "Shower Thoughts", "href": "/shower-thoughts" },
+        { "label": "Questions", "href": "/questions" },
+        { "label": "Quotes", "href": "/quotes" },
+        { "label": "Leadership", "href": "/leadership" },
+        { "label": "Superposition", "href": "/superposition" },
+        { "label": "Art", "href": "/art" },
+        { "label": "Religion", "href": "/religion" },
+        { "label": "Word Study", "href": "/word-study" }
+      ]
+    },
+    { "divider": true },
+    {
+      "label": "Projects",
+      "children": [
+        { "label": "Substack", "href": "https://substack.com", "external": true },
+        { "label": "GitHub", "href": "https://github.com", "external": true },
+        { "label": "Twitter / X", "href": "https://x.com", "external": true }
+      ]
+    }
+  ]
+}

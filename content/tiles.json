@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Substack",
+    "description": "Essays on technology, life, and everything in between",
+    "url": "https://substack.com",
+    "color": "#f55811",
+    "textColor": "#fff",
+    "span": 2,
+    "icon": "pencil"
+  },
+  {
+    "title": "Spotify Playlist",
+    "description": "What I'm listening to right now",
+    "url": "https://spotify.com",
+    "color": "#1DB954",
+    "textColor": "#fff",
+    "span": 1,
+    "icon": "music"
+  },
+  {
+    "title": "GitHub",
+    "description": "Open source projects and experiments",
+    "url": "https://github.com",
+    "color": "#24292e",
+    "textColor": "#fff",
+    "span": 1,
+    "icon": "code"
+  },
+  {
+    "title": "Reading List",
+    "description": "Books that changed how I think",
+    "url": "#",
+    "color": "#8B5E3C",
+    "textColor": "#fff",
+    "span": 1,
+    "icon": "book"
+  },
+  {
+    "title": "Photography",
+    "description": "Moments captured through a lens",
+    "url": "#",
+    "color": "#2C3E50",
+    "textColor": "#fff",
+    "span": 1,
+    "icon": "camera"
+  },
+  {
+    "title": "Twitter / X",
+    "description": "Thoughts in 280 characters or less",
+    "url": "https://x.com",
+    "color": "#0a0a0a",
+    "textColor": "#fff",
+    "span": 1,
+    "icon": "twitter"
+  },
+  {
+    "title": "Side Projects",
+    "description": "Things I build when I should be sleeping",
+    "url": "#",
+    "color": "#6C5CE7",
+    "textColor": "#fff",
+    "span": 2,
+    "icon": "rocket"
+  }
+]

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" fill="none">
+  <!-- Simple placeholder character silhouette -->
+  <!-- Head -->
+  <circle cx="60" cy="30" r="20" fill="#1a1a1a"/>
+  <!-- Body -->
+  <rect x="45" y="50" width="30" height="45" rx="8" fill="#1a1a1a"/>
+  <!-- Left arm -->
+  <rect x="25" y="55" width="20" height="10" rx="5" fill="#1a1a1a"/>
+  <!-- Right arm -->
+  <rect x="75" y="55" width="20" height="10" rx="5" fill="#1a1a1a"/>
+  <!-- Left leg -->
+  <rect x="45" y="95" width="12" height="35" rx="6" fill="#1a1a1a"/>
+  <!-- Right leg -->
+  <rect x="63" y="95" width="12" height="35" rx="6" fill="#1a1a1a"/>
+  <!-- Star/sparkle accent -->
+  <path d="M95 15 L98 25 L108 28 L98 31 L95 41 L92 31 L82 28 L92 25 Z" fill="#1a1a1a" opacity="0.6"/>
+</svg>

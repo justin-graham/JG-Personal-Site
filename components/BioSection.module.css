@@ -1,0 +1,30 @@
+.section {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 120px 24px;
+}
+
+.bio p {
+  font-family: var(--font-inter);
+  font-size: 20px;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  text-align: justify;
+  margin-bottom: 1.5em;
+  color: var(--color-text);
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 80px 20px;
+  }
+
+  .bio p {
+    font-size: 17px;
+    text-align: left;
+  }
+}
