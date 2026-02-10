@@ -1,9 +1,9 @@
 .wrapper {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 24px;
+  padding: 160px 24px 40px;
   background: var(--color-bg);
 }
 

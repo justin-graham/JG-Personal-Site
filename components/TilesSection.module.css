@@ -6,60 +6,102 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  grid-auto-flow: dense;
 }
 
 .tile {
   border-radius: 16px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 180px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .tile:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.span2 {
-  grid-column: span 2;
+.tile:focus-within {
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
 }
 
-@media (max-width: 640px) {
-  .span2 {
-    grid-column: span 1;
+.spotifyTile {
+  grid-column: span 2;
+  background: #121212;
+  border-color: #121212;
+  padding: 14px;
+}
+
+.spotifyFrame {
+  border: 0;
+  border-radius: 12px;
+  display: block;
+}
+
+.spotifyLink {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 2;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 7px 10px;
+  backdrop-filter: blur(4px);
+}
+
+.spotifyLink:focus-visible,
+.substackTile:focus-visible {
+  outline: 2px solid #007aff;
+  outline-offset: 3px;
+}
+
+.substackTile {
+  display: block;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+}
+
+.substackImage {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.substackTile:hover .substackImage {
+  transform: scale(1.03);
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .spotifyTile {
+    grid-column: 1 / -1;
   }
 }
 
-.tileIcon {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
+@media (max-width: 700px) {
+  .section {
+    padding: 64px 20px;
+  }
 
-.tileTitle {
-  font-family: var(--font-inter);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
-.tileDescription {
-  font-family: var(--font-inter);
-  font-size: 0.9rem;
-  opacity: 0.85;
-  line-height: 1.5;
-}
-
-.tileExternal {
-  font-family: var(--font-inter);
-  font-size: 0.8rem;
-  opacity: 0.7;
-  margin-top: 16px;
-  align-self: flex-end;
+  .spotifyTile {
+    grid-column: span 1;
+  }
 }

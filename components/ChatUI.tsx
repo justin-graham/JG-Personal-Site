@@ -8,8 +8,8 @@ interface Message {
 
 export default function ChatUI() {
   const [messages, setMessages] = useState<Message[]>([
-    { text: 'Hey! Thanks for stopping by.', from: 'justin' },
-    { text: "Send me a message and I'll get back to you.", from: 'justin' },
+    { text: "thanks for caring about the things I'm curious about", from: 'justin' },
+    { text: "send me a message and I'll get back to you!", from: 'justin' },
   ])
   const [input, setInput] = useState('')
   const [sending, setSending] = useState(false)
@@ -45,7 +45,7 @@ export default function ChatUI() {
         setTimeout(() => {
           setMessages((prev) => [
             ...prev,
-            { text: "Got it! I'll get back to you soon.", from: 'justin' },
+            { text: "recieved, now go get some sun on your skin!", from: 'justin' },
           ])
         }, 1500)
       } else {
@@ -119,12 +119,8 @@ export default function ChatUI() {
           </div>
         </div>
         <div className={styles.socials}>
-          <a href="mailto:your@email.com">Email</a>
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
-            X
-          </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/justin-graham"
             target="_blank"
             rel="noopener noreferrer"
           >

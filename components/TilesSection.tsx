@@ -1,18 +1,9 @@
 import type { TileItem } from '@/lib/types'
+import Image from 'next/image'
 import styles from './TilesSection.module.css'
 
 interface TilesSectionProps {
   tiles: TileItem[]
-}
-
-const iconMap: Record<string, string> = {
-  pencil: '\u270F\uFE0F',
-  music: '\uD83C\uDFB5',
-  code: '\uD83D\uDCBB',
-  book: '\uD83D\uDCDA',
-  camera: '\uD83D\uDCF7',
-  twitter: '\uD83D\uDCAC',
-  rocket: '\uD83D\uDE80',
 }
 
 export default function TilesSection({ tiles }: TilesSectionProps) {
@@ -20,25 +11,50 @@ export default function TilesSection({ tiles }: TilesSectionProps) {
     <section id="tiles" className={styles.section}>
       <div className={styles.grid}>
         {tiles.map((tile) => (
-          <a
-            key={tile.title}
-            href={tile.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${styles.tile} ${tile.span === 2 ? styles.span2 : ''}`}
-            style={{ backgroundColor: tile.color, color: tile.textColor }}
-          >
-            <div>
-              {tile.icon && (
-                <div className={styles.tileIcon}>
-                  {iconMap[tile.icon] || tile.icon}
-                </div>
-              )}
-              <div className={styles.tileTitle}>{tile.title}</div>
-              <div className={styles.tileDescription}>{tile.description}</div>
-            </div>
-            <div className={styles.tileExternal}>&nearr;</div>
-          </a>
+          tile.kind === 'spotify' ? (
+            <article key={tile.id} className={`${styles.tile} ${styles.spotifyTile}`}>
+              <a
+                href={tile.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.spotifyLink}
+                aria-label={`Open ${tile.title} on Spotify`}
+              >
+                Open on Spotify <span aria-hidden="true">&nearr;</span>
+              </a>
+              <iframe
+                data-testid="embed-iframe"
+                className={styles.spotifyFrame}
+                src={tile.embedSrc}
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title={`${tile.title} playlist`}
+              />
+            </article>
+          ) : (
+            <a
+              key={tile.id}
+              href={tile.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.tile} ${styles.substackTile}`}
+              aria-label={`Open Substack post: ${tile.alt}`}
+            >
+              <div className={styles.imageWrap}>
+                <Image
+                  src={tile.imageSrc}
+                  alt={tile.alt}
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                  className={styles.substackImage}
+                />
+              </div>
+            </a>
+          )
         ))}
       </div>
     </section>

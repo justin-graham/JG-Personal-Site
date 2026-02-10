@@ -6,17 +6,28 @@ export interface BioVariant {
 export interface LinkItem {
   title: string
   slug: string
+  href?: string
+  isHeader?: boolean
 }
 
-export interface TileItem {
-  title: string
-  description: string
+interface BaseTile {
+  id: string
   url: string
-  color: string
-  textColor: string
-  span?: number
-  icon?: string
 }
+
+export interface SpotifyTile extends BaseTile {
+  kind: 'spotify'
+  embedSrc: string
+  title: string
+}
+
+export interface SubstackTile extends BaseTile {
+  kind: 'substack'
+  imageSrc: string
+  alt: string
+}
+
+export type TileItem = SpotifyTile | SubstackTile
 
 export interface MenuItem {
   label?: string

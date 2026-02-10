@@ -6,5 +6,11 @@
   { "title": "Superposition", "slug": "superposition" },
   { "title": "Art", "slug": "art" },
   { "title": "Religion", "slug": "religion" },
-  { "title": "Word Study", "slug": "word-study" }
+  { "title": "Word Study", "slug": "word-study" },
+  { "title": "Recent Projects", "slug": "recent-projects", "isHeader": true },
+  { "title": "Almanack AI", "slug": "almanack-ai", "href": "https://almanackai.com" },
+  { "title": "Tachi Protocol", "slug": "tachi-protocol", "href": "https://www.tachiprotocol.com" },
+  { "title": "VolantUAS", "slug": "volant", "href": "/volant" },
+  { "title": "AF Baseball R&D", "slug": "af-baseball", "href": "https://ffwk.us" },
+  { "title": "Tieout", "slug": "tieout", "href": "https://www.tieoutlaw.com" }
 ]

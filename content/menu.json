@@ -28,11 +28,11 @@
     { "divider": true },
     {
       "label": "Projects",
-      "children": [
-        { "label": "Substack", "href": "https://substack.com", "external": true },
-        { "label": "GitHub", "href": "https://github.com", "external": true },
-        { "label": "Twitter / X", "href": "https://x.com", "external": true }
-      ]
+      "href": "/#links"
+    },
+    {
+      "label": "Substack & Spotify",
+      "href": "/#tiles"
     }
   ]
 }

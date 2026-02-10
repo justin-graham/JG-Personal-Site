@@ -7,7 +7,7 @@ import TilesSection from '@/components/TilesSection'
 import GlobalHeader from '@/components/GlobalHeader'
 import bioVariants from '@/content/bio-variants.json'
 import links from '@/content/links.json'
-import tiles from '@/content/tiles.json'
+import tiles from '@/content/tiles'
 
 export default function Home() {
   return (
@@ -19,7 +19,6 @@ export default function Home() {
           content="Justin Graham's Master Plan — builder, thinker, perpetually curious."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalHeader />
       <main>
