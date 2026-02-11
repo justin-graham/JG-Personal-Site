@@ -30,7 +30,6 @@ export default function BioSlider({ variants }: BioSliderProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.textContainer}>
-        <p className={styles.variantLabel}>{variants[displayIndex].label}</p>
         <p
           className={`${styles.variantText} ${
             fading ? styles.fadeOut : styles.fadeIn

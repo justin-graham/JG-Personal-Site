@@ -1,5 +1,4 @@
 export interface BioVariant {
-  label: string
   text: string
 }
 
