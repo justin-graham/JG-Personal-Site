@@ -1,17 +1,19 @@
 ---
 title: "Leadership"
-subtitle: "Notes on leading people and organizations"
+subtitle: ""
 ---
 
-Leadership is not about having all the answers. It's about asking the right questions and creating the space for others to find the answers.
+It’s comforting to be around somebody who KNOWS something, who is skilled at their craft in life. When someone is confident it is nice to be around that energy because we can lean on it. Leaders build this in themselves and in others. Below is a collection of thoughts on leading.
 
-The best leaders I've worked with share a common trait: they make the people around them better. Not through grand gestures, but through consistent small acts — listening deeply, giving honest feedback, and trusting their teams to figure things out.
+Aim for a deadline that can be achieved with a 50% probability.
 
-A few principles I keep coming back to:
+Viking Laws are timeless:
+1. Be brave and aggressive.
+2. Be prepared.
+3. Be a good merchant.
+4. Keep camp in order.
 
-- **Context over control.** Give people the information they need to make good decisions, then let them make decisions.
 
-- **Speed of trust.** Everything moves faster when people trust each other. Invest in building trust before you need it.
 
 - **Disagree and commit.** Healthy debate is essential. But once a decision is made, align fully and execute.
 

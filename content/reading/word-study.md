@@ -3,6 +3,9 @@ title: "Word Study"
 subtitle: "Words that deserve more attention"
 ---
 
+Etymology remembers what ideology and culture forgets.
+
+
 **Sonder** — The realization that each random passerby is living a life as vivid and complex as your own.
 
 **Tsundoku** (積ん読) — The act of acquiring books and letting them pile up without reading them. Japanese.

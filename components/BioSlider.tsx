@@ -41,7 +41,7 @@ export default function BioSlider({ variants }: BioSliderProps) {
 
       <div className={styles.sliderSection}>
         <div className={styles.sliderContainer}>
-          <span className={styles.label}>Fun JG</span>
+          <span className={styles.label}>Fun Justin</span>
           <input
             type="range"
             min={0}
