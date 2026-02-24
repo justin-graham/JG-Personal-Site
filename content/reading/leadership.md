@@ -13,10 +13,4 @@ Viking Laws are timeless:
 3. Be a good merchant.
 4. Keep camp in order.
 
-
-
-- **Disagree and commit.** Healthy debate is essential. But once a decision is made, align fully and execute.
-
-- **Default to transparency.** Share more than you think you need to. Information asymmetry breeds dysfunction.
-
-- **Celebrate the work, not the hero.** Great outcomes come from great teams, not great individuals.
+COMING SOON...

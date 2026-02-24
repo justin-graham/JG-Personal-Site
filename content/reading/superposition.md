@@ -1,6 +1,6 @@
 ---
 title: "Superposition"
-subtitle: "Holding multiple ideas at once"
+subtitle: "Dichotomies and Parodoxi."
 ---
 
 I will write a forthcoming book on the topic when the time is right. Holding two unresolving truths simutaneously is a superpower.....

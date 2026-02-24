@@ -120,7 +120,7 @@ export default function ChatUI() {
         </div>
         <div className={styles.socials}>
           <a
-            href="https://linkedin.com/in/justin-graham"
+            href="https://www.linkedin.com/in/justin-w-graham/"
             target="_blank"
             rel="noopener noreferrer"
           >
