@@ -1,13 +1,13 @@
 ---
 title: "Shower Thoughts"
-subtitle: "Things that occur to me that go immediately to my Apple notes app.
+subtitle: "Things that occur to me that go immediately to my Apple notes app."
 ---
 
 
 biology is non toxic, biology is efficient, biology is beautiful, biology is technology
 
 The portal story: someone is trapped in a humdrum existence in an ordinary world until some sort of magical portal enters their life
-- wardrobe in Narnia, platform 9 3/4\
+- wardrobe in Narnia, platform 9 3/4
 - the question is, where is the portal? the call to adventure in an alternate universe?
 
 The old days of the internet (from what I've heard) were a goldmine because it delivered huge amount of value to society but no profit to anyone. Then people figured out the ad-model.
