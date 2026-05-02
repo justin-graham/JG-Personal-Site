@@ -26,7 +26,17 @@ export interface SubstackTile extends BaseTile {
   alt: string
 }
 
-export type TileItem = SpotifyTile | SubstackTile
+export interface ProjectTile extends BaseTile {
+  kind: 'project'
+  title: string
+  kicker: string
+  description: string
+  imageSrc: string
+  imageAlt: string
+  cta: string
+}
+
+export type TileItem = SpotifyTile | SubstackTile | ProjectTile
 
 export interface MenuItem {
   label?: string

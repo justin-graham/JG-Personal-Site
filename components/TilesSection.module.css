@@ -59,7 +59,8 @@
 }
 
 .spotifyLink:focus-visible,
-.substackTile:focus-visible {
+.substackTile:focus-visible,
+.projectTile:focus-visible {
   outline: 2px solid #007aff;
   outline-offset: 3px;
 }
@@ -80,6 +81,72 @@
 
 .substackTile:hover .substackImage {
   transform: scale(1.03);
+}
+
+.projectTile {
+  display: block;
+  aspect-ratio: 4 / 5;
+  background: #121412;
+  color: #fff;
+}
+
+.projectTile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(18, 20, 18, 0.02) 20%, rgba(18, 20, 18, 0.36) 56%, rgba(18, 20, 18, 0.88) 100%);
+  pointer-events: none;
+}
+
+.projectImage {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.projectTile:hover .projectImage {
+  transform: scale(1.03);
+}
+
+.projectOverlay {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projectKicker,
+.projectAction {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.projectKicker {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.projectTitle {
+  font-family: var(--font-lora);
+  font-size: 27px;
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+.projectDescription {
+  font-family: var(--font-inter);
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.projectAction {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 @media (max-width: 1100px) {

@@ -1,4 +1,4 @@
-import type { SpotifyTile, SubstackTile, TileItem } from '@/lib/types'
+import type { ProjectTile, SpotifyTile, SubstackTile, TileItem } from '@/lib/types'
 
 const spotifyPlaylists: SpotifyTile[] = [
   {
@@ -115,9 +115,25 @@ const substackPosts: SubstackTile[] = [
   },
 ]
 
+const projectTiles: ProjectTile[] = [
+  {
+    id: 'prompt-and-circumstance',
+    kind: 'project',
+    url: 'https://justin-graham.github.io/prompt-and-circumstance/',
+    title: 'The Invisible Workforce',
+    kicker: 'Prompt and Circumstance',
+    description:
+      'A research artifact on AI labor market measurement and the workers missing from chat-first data.',
+    imageSrc: '/prompt-circumstance-hero-poster.jpg',
+    imageAlt: 'Illustrated robots working across physical tasks',
+    cta: 'Open project',
+  },
+]
+
 const tileOrder = [
   's1',
   's2',
+  'prompt-and-circumstance',
   'p1',
   's3',
   's4',
@@ -133,7 +149,9 @@ const tileOrder = [
   's11',
 ] as const
 
-const byId = new Map<string, TileItem>([...spotifyPlaylists, ...substackPosts].map((tile) => [tile.id, tile]))
+const byId = new Map<string, TileItem>(
+  [...spotifyPlaylists, ...substackPosts, ...projectTiles].map((tile) => [tile.id, tile])
+)
 
 const tiles: TileItem[] = tileOrder.map((id) => {
   const tile = byId.get(id)
@@ -144,4 +162,3 @@ const tiles: TileItem[] = tileOrder.map((id) => {
 })
 
 export default tiles
-

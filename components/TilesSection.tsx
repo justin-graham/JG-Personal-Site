@@ -10,32 +10,65 @@ export default function TilesSection({ tiles }: TilesSectionProps) {
   return (
     <section id="tiles" className={styles.section}>
       <div className={styles.grid}>
-        {tiles.map((tile) => (
-          tile.kind === 'spotify' ? (
-            <article key={tile.id} className={`${styles.tile} ${styles.spotifyTile}`}>
+        {tiles.map((tile) => {
+          if (tile.kind === 'spotify') {
+            return (
+              <article key={tile.id} className={`${styles.tile} ${styles.spotifyTile}`}>
+                <a
+                  href={tile.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.spotifyLink}
+                  aria-label={`Open ${tile.title} on Spotify`}
+                >
+                  Open on Spotify <span aria-hidden="true">↗</span>
+                </a>
+                <iframe
+                  data-testid="embed-iframe"
+                  className={styles.spotifyFrame}
+                  src={tile.embedSrc}
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title={`${tile.title} playlist`}
+                />
+              </article>
+            )
+          }
+
+          if (tile.kind === 'project') {
+            return (
               <a
+                key={tile.id}
                 href={tile.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.spotifyLink}
-                aria-label={`Open ${tile.title} on Spotify`}
+                className={`${styles.tile} ${styles.projectTile}`}
+                aria-label={`Open project: ${tile.title}`}
               >
-                Open on Spotify <span aria-hidden="true">&nearr;</span>
+                <Image
+                  src={tile.imageSrc}
+                  alt={tile.imageAlt}
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                  className={styles.projectImage}
+                />
+                <div className={styles.projectOverlay}>
+                  <span className={styles.projectKicker}>{tile.kicker}</span>
+                  <h2 className={styles.projectTitle}>{tile.title}</h2>
+                  <p className={styles.projectDescription}>{tile.description}</p>
+                  <span className={styles.projectAction}>
+                    {tile.cta} <span aria-hidden="true">↗</span>
+                  </span>
+                </div>
               </a>
-              <iframe
-                data-testid="embed-iframe"
-                className={styles.spotifyFrame}
-                src={tile.embedSrc}
-                width="100%"
-                height="352"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title={`${tile.title} playlist`}
-              />
-            </article>
-          ) : (
+            )
+          }
+
+          return (
             <a
               key={tile.id}
               href={tile.url}
@@ -55,7 +88,7 @@ export default function TilesSection({ tiles }: TilesSectionProps) {
               </div>
             </a>
           )
-        ))}
+        })}
       </div>
     </section>
   )
