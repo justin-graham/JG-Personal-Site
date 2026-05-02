@@ -9,7 +9,7 @@ interface Message {
 export default function ChatUI() {
   const [messages, setMessages] = useState<Message[]>([
     { text: "thanks for caring about the things I'm curious about", from: 'justin' },
-    { text: "send me a message and I'll get back to you!", from: 'justin' },
+    { text: "send me your name, way to reach you, and a message and I'll get back to you!", from: 'justin' },
   ])
   const [input, setInput] = useState('')
   const [sending, setSending] = useState(false)
