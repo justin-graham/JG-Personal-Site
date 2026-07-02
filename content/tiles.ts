@@ -1,4 +1,4 @@
-import type { ProjectTile, SpotifyTile, SubstackTile, TileItem } from '@/lib/types'
+import type { LinkTile, ProjectTile, SpotifyTile, TileItem } from '@/lib/types'
 
 const spotifyPlaylists: SpotifyTile[] = [
   {
@@ -35,86 +35,6 @@ const spotifyPlaylists: SpotifyTile[] = [
   },
 ]
 
-const substackPosts: SubstackTile[] = [
-  {
-    id: 's1',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/the-best-major-league-baseball-players?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed.jpeg',
-    alt: 'The best major league baseball players',
-  },
-  {
-    id: 's2',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/30-for-30?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-2.jpeg',
-    alt: '30 for 30',
-  },
-  {
-    id: 's3',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/ask-sweet-people-sourdough-questions?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-3.jpeg',
-    alt: 'Ask sweet people sourdough questions',
-  },
-  {
-    id: 's4',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/lessons-from-year-one-as-a-college?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-4.jpeg',
-    alt: 'Lessons from year one as a college',
-  },
-  {
-    id: 's5',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/actually-i-just-want-a-faster-horse?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-5.jpeg',
-    alt: 'Actually I just want a faster horse',
-  },
-  {
-    id: 's6',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/im-thankful-i-have-friends-i-can?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-6.jpeg',
-    alt: 'I am thankful I have friends I can',
-  },
-  {
-    id: 's7',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/flashes-of-intuition?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-7.jpeg',
-    alt: 'Flashes of intuition',
-  },
-  {
-    id: 's8',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/maxwells-demon-and-the-art-of-curating?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-8.jpeg',
-    alt: "Maxwell's demon and the art of curating",
-  },
-  {
-    id: 's9',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/fundamentals-of-the-prc?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-9.jpeg',
-    alt: 'Fundamentals of the PRC',
-  },
-  {
-    id: 's10',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/describe-coffee-to-me-the-flavor?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-10.jpeg',
-    alt: 'Describe coffee to me the flavor',
-  },
-  {
-    id: 's11',
-    kind: 'substack',
-    url: 'https://open.substack.com/pub/semuta/p/most-jobs-are-useless-and-fake?r=4singa&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true',
-    imageSrc: '/composed-11.jpeg',
-    alt: 'Most jobs are useless and fake',
-  },
-]
-
 const projectTiles: ProjectTile[] = [
   {
     id: 'prompt-and-circumstance',
@@ -130,27 +50,171 @@ const projectTiles: ProjectTile[] = [
   },
 ]
 
+const linkTiles: LinkTile[] = [
+  {
+    id: 'gleech',
+    kind: 'link',
+    url: 'https://www.gleech.org/',
+    title: 'Gleech',
+    source: 'gleech.org',
+  },
+  {
+    id: 'airfoil',
+    kind: 'link',
+    url: 'https://ciechanow.ski/airfoil/',
+    title: 'Airfoil',
+    source: 'Bartosz Ciechanowski',
+  },
+  {
+    id: 'illustrated-transformer',
+    kind: 'link',
+    url: 'https://jalammar.github.io/illustrated-transformer/',
+    title: 'The Illustrated Transformer',
+    source: 'Jay Alammar',
+  },
+  {
+    id: 'scaling-book',
+    kind: 'link',
+    url: 'https://jax-ml.github.io/scaling-book/conclusion/',
+    title: 'The Scaling Book',
+    source: 'JAX ML',
+  },
+  {
+    id: 'robotic-hand-wristband',
+    kind: 'link',
+    url: 'https://news.mit.edu/2026/wristband-enables-wearers-control-robotic-hand-with-own-movements-0325',
+    title: 'Wristband Control for Robotic Hands',
+    source: 'MIT News',
+  },
+  {
+    id: 'decision-making',
+    kind: 'link',
+    url: 'https://www.newyorker.com/magazine/2019/01/21/the-art-of-decision-making',
+    title: 'The Art of Decision-Making',
+    source: 'The New Yorker',
+  },
+  {
+    id: 'sky-blue',
+    kind: 'link',
+    url: 'https://explainers.blog/posts/why-is-the-sky-blue/',
+    title: 'Why Is the Sky Blue?',
+    source: 'Explainers',
+  },
+  {
+    id: 'nine-things',
+    kind: 'link',
+    url: 'http://edwardpackard.com/wp-content/uploads/2025/09/Nine-Things-I-Learned-in-Ninety-Years.pdf',
+    title: 'Nine Things I Learned in Ninety Years',
+    source: 'Edward Packard',
+  },
+  {
+    id: 'fast',
+    kind: 'link',
+    url: 'https://patrickcollison.com/fast',
+    title: 'Fast',
+    source: 'Patrick Collison',
+  },
+  {
+    id: 'champion-rival',
+    kind: 'link',
+    url: 'https://tombrady.com/posts/every-champion-needs-a-rival',
+    title: 'Every Champion Needs a Rival',
+    source: 'Tom Brady',
+  },
+  {
+    id: 'gervais-principle',
+    kind: 'link',
+    url: 'https://www.ribbonfarm.com/2009/10/07/the-gervais-principle-or-the-office-according-to-the-office/',
+    title: 'The Gervais Principle',
+    source: 'Ribbonfarm',
+  },
+  {
+    id: 'sauna',
+    kind: 'link',
+    url: 'https://localmile.org/trumpkins-notes-on-building-a-sauna/',
+    title: 'Notes on Building a Sauna',
+    source: 'Local Mile',
+  },
+  {
+    id: 'which-year',
+    kind: 'link',
+    url: 'https://whichyr.com/',
+    title: 'Which Year',
+    source: 'Photo Year Guessing Game',
+  },
+  {
+    id: 'cheese-tapping',
+    kind: 'link',
+    url: 'https://www.cheeseprofessor.com/blog/cheese-wheel-tapping',
+    title: 'Why Tap a Wheel of Cheese?',
+    source: 'The Cheese Professor',
+  },
+  {
+    id: 'cities-and-ambition',
+    kind: 'link',
+    url: 'https://www.paulgraham.com/cities.html',
+    title: 'Cities and Ambition',
+    source: 'Paul Graham',
+  },
+  {
+    id: 'circle-animals',
+    kind: 'link',
+    url: 'https://www.dorithegiant.com/2016/05/13-animals-made-from-13-circles.html',
+    title: '13 Animals Made From 13 Circles',
+    source: 'Dori the Giant',
+  },
+  {
+    id: 'beautiful-physics-paragraph',
+    kind: 'link',
+    url: 'https://www.reddit.com/r/explainlikeimfive/comments/ga39ic/eli5_can_someone_help_translate_whats_been_called/',
+    title: 'The Most Beautiful Paragraph in Physics',
+    source: 'Reddit ELI5',
+  },
+  {
+    id: 'oxman',
+    kind: 'link',
+    url: 'https://oxman.com/',
+    title: 'OXMAN',
+    source: 'oxman.com',
+  },
+  {
+    id: 'brain-food',
+    kind: 'link',
+    url: 'https://www.forkingpaths.co/p/brain-food-590/comments',
+    title: 'Comments - Brain Food',
+    source: 'Brian Klaas',
+  },
+]
+
 const tileOrder = [
-  's1',
-  's2',
-  'prompt-and-circumstance',
   'p1',
-  's3',
-  's4',
-  's5',
+  'airfoil',
+  'illustrated-transformer',
+  'prompt-and-circumstance',
+  'gleech',
+  'scaling-book',
   'p2',
-  's6',
-  's7',
+  'robotic-hand-wristband',
+  'decision-making',
+  'sky-blue',
+  'nine-things',
+  'fast',
   'p3',
-  's8',
-  's9',
-  's10',
+  'champion-rival',
+  'gervais-principle',
+  'sauna',
+  'which-year',
+  'cheese-tapping',
+  'cities-and-ambition',
   'p4',
-  's11',
+  'circle-animals',
+  'beautiful-physics-paragraph',
+  'oxman',
+  'brain-food',
 ] as const
 
 const byId = new Map<string, TileItem>(
-  [...spotifyPlaylists, ...substackPosts, ...projectTiles].map((tile) => [tile.id, tile])
+  [...spotifyPlaylists, ...projectTiles, ...linkTiles].map((tile) => [tile.id, tile])
 )
 
 const tiles: TileItem[] = tileOrder.map((id) => {

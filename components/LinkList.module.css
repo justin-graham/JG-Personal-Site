@@ -10,6 +10,10 @@
 .item {
 }
 
+.spaceBefore {
+  margin-top: 2.7em;
+}
+
 .item a {
   display: block;
   padding: 4px 0;

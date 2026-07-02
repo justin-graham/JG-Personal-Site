@@ -6,6 +6,12 @@ interface TilesSectionProps {
   tiles: TileItem[]
 }
 
+function getLinkPreviewSrc(url: string) {
+  return `https://api.microlink.io/?url=${encodeURIComponent(
+    url
+  )}&screenshot=true&meta=false&embed=screenshot.url`
+}
+
 export default function TilesSection({ tiles }: TilesSectionProps) {
   return (
     <section id="tiles" className={styles.section}>
@@ -68,26 +74,38 @@ export default function TilesSection({ tiles }: TilesSectionProps) {
             )
           }
 
-          return (
-            <a
-              key={tile.id}
-              href={tile.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${styles.tile} ${styles.substackTile}`}
-              aria-label={`Open Substack post: ${tile.alt}`}
-            >
-              <div className={styles.imageWrap}>
-                <Image
-                  src={tile.imageSrc}
-                  alt={tile.alt}
-                  fill
-                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                  className={styles.substackImage}
+          if (tile.kind === 'link') {
+            const previewSrc = tile.previewSrc || getLinkPreviewSrc(tile.url)
+
+            return (
+              <a
+                key={tile.id}
+                href={tile.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.tile} ${styles.linkTile}`}
+                aria-label={`Open link: ${tile.title}`}
+              >
+                <img
+                  src={previewSrc}
+                  alt=""
+                  className={styles.linkPreviewImage}
+                  loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.style.display = 'none'
+                  }}
                 />
-              </div>
-            </a>
-          )
+                <div className={styles.linkContent}>
+                  <span className={styles.linkSource}>{tile.source}</span>
+                  <div className={styles.linkText}>
+                    <h2 className={styles.linkTitle}>{tile.title}</h2>
+                  </div>
+                </div>
+              </a>
+            )
+          }
+
+          return null
         })}
       </div>
     </section>

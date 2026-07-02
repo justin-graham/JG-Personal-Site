@@ -7,6 +7,7 @@ export interface LinkItem {
   slug: string
   href?: string
   isHeader?: boolean
+  spaceBefore?: boolean
 }
 
 interface BaseTile {
@@ -20,12 +21,6 @@ export interface SpotifyTile extends BaseTile {
   title: string
 }
 
-export interface SubstackTile extends BaseTile {
-  kind: 'substack'
-  imageSrc: string
-  alt: string
-}
-
 export interface ProjectTile extends BaseTile {
   kind: 'project'
   title: string
@@ -36,7 +31,14 @@ export interface ProjectTile extends BaseTile {
   cta: string
 }
 
-export type TileItem = SpotifyTile | SubstackTile | ProjectTile
+export interface LinkTile extends BaseTile {
+  kind: 'link'
+  title: string
+  source: string
+  previewSrc?: string
+}
+
+export type TileItem = SpotifyTile | ProjectTile | LinkTile
 
 export interface MenuItem {
   label?: string
