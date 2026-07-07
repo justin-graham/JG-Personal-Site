@@ -1,6 +1,11 @@
 [
   { "title": "Recent Writing", "slug": "recent-writing", "isHeader": true },
   {
+    "title": "Robotics Data Layer",
+    "slug": "robotics-data-layer",
+    "href": "https://justin-graham.github.io/robotics_data_layer/"
+  },
+  {
     "title": "Prompt and Circumstance",
     "slug": "prompt-and-circumstance",
     "href": "https://justin-graham.github.io/prompt-and-circumstance/"
