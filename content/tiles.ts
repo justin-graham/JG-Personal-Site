@@ -184,6 +184,13 @@ const linkTiles: LinkTile[] = [
     title: 'Comments - Brain Food',
     source: 'Brian Klaas',
   },
+  {
+    id: 'predictions-scorecard',
+    kind: 'link',
+    url: 'https://rodneybrooks.com/predictions-scorecard-2025-january-01/',
+    title: 'Predictions Scorecard, 2025 January 01',
+    source: 'Rodney Brooks',
+  },
 ]
 
 const tileOrder = [
@@ -211,6 +218,7 @@ const tileOrder = [
   'beautiful-physics-paragraph',
   'oxman',
   'brain-food',
+  'predictions-scorecard',
 ] as const
 
 const byId = new Map<string, TileItem>(
