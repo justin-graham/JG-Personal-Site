@@ -191,6 +191,13 @@ const linkTiles: LinkTile[] = [
     title: 'Predictions Scorecard, 2025 January 01',
     source: 'Rodney Brooks',
   },
+  {
+    id: 'google-platforms-rant',
+    kind: 'link',
+    url: 'https://gist.github.com/chitchcock/1281611',
+    title: "Stevey's Google Platforms Rant",
+    source: 'Steve Yegge',
+  },
 ]
 
 const tileOrder = [
@@ -219,6 +226,7 @@ const tileOrder = [
   'oxman',
   'brain-food',
   'predictions-scorecard',
+  'google-platforms-rant',
 ] as const
 
 const byId = new Map<string, TileItem>(
