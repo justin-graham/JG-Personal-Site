@@ -198,6 +198,13 @@ const linkTiles: LinkTile[] = [
     title: "Stevey's Google Platforms Rant",
     source: 'Steve Yegge',
   },
+  {
+    id: 'cannot-spit-it-out',
+    kind: 'link',
+    url: 'https://tvtropes.org/pmwiki/pmwiki.php/Main/CannotSpitItOut',
+    title: 'Cannot Spit It Out',
+    source: 'TV Tropes',
+  },
 ]
 
 const tileOrder = [
@@ -227,6 +234,7 @@ const tileOrder = [
   'brain-food',
   'predictions-scorecard',
   'google-platforms-rant',
+  'cannot-spit-it-out',
 ] as const
 
 const byId = new Map<string, TileItem>(
